@@ -1,0 +1,201 @@
+/* reset basic spacing + set a clean default font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* main page background and layout */
+body {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* big page heading styling */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #e74c3c;
+  text-shadow: 2px 2px #000;
+  text-align: center;
+}
+
+/* area that holds the dropdown and button */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* label for the dropdown */
+.controls label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #f1c40f;
+}
+
+/* movie dropdown styling */
+.controls select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+/* button style for get info */
+.controls button {
+  padding: 10px 18px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* hover effect for button */
+.controls button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* card layout for movie and  actor boxes */
+.card {
+  background-color: #2c2c2c;
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* movie poster image style */
+#movieContainer img {
+  width: 220px;
+  height: 330px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+/* movie title */
+#movieContainer h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #f39c12;
+}
+
+/* movie details text */
+#movieContainer p {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* actor area layout*/
+#actorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* each actor card width */
+#actorContainer div {
+  width: 160px;
+  text-align: center;
+}
+
+/* actor image style */
+#actorContainer img {
+  width: 160px;
+  height: 240px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover zoom effect on actor photos */
+#actorContainer img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* actor names */
+#actorContainer h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #e67e22;
+}
+
+/* footer background and  spacing */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-top: 2px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+/* footer title text */
+footer p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* remove bullets from footer links */
+footer ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+/* keep footer items side by side */
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* footer link appearance */
+footer ul li a {
+    text-decoration: none;
+    color: #007BFF; 
+    font-weight: 500;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+/* hover effect for footer links */
+footer ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* make actor section responsive for small screens */
+@media (max-width: 600px) {
+  #actorContainer div {
+    width: 45%;
+  }
+
+  #movieContainer img {
+    width: 150px;
+    height: 225px;
+  }
+}

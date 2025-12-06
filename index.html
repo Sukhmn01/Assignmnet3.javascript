@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <!-- make website responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- page title -->
+  <title>Movie & Actor Info</title>
+  
+  <!-- css file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- main heading -->
+  <h1>Movie & Cast Lookup</h1>
+
+    <div class="controls">
+    <label for="movieSelect">Select a Movie:</label>
+
+    <!-- dropdown list of movies -->
+    <select id="movieSelect">
+      <option value="">--Select a Movie--</option>
+      <option value="Avengers">Avengers</option>
+      <option value="Titanic">Titanic</option>
+      <option value="Inception">Inception</option>
+      <option value="Joker">Joker</option>
+      <option value="Interstellar">Interstellar</option>
+      <option value="The Dark Knight">The Dark Knight</option>
+    </select>
+
+    <!-- button to fetch movie info -->
+    <button id="getMovieBtn">Get Info</button>
+  </div>
+
+  <div id="movieContainer" class="card"></div>
+  <div id="actorContainer" class="card"></div>
+
+  <!-- footer with API reference links -->
+  <footer>
+  <p>APIs used:</p>
+  <ul>
+    <li><a href="https://www.omdbapi.com/" target="_blank">OMDb API Documentation</a></li>
+    <li><a href="https://developers.themoviedb.org/3" target="_blank">TMDb API Documentation</a></li>
+  </ul>
+</footer>
+
+   <!-- js file -->
+  <script src="script.js"></script>
+</body>
+</html>
